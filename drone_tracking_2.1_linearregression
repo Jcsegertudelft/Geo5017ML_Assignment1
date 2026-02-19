@@ -57,3 +57,11 @@ ax.set_zlabel('Z Position')
 ax.set_title('Drone Trajectory',pad=20)
 ax.legend()
 plt.show()
+
+
+
+# Linear regression formulas
+# x(t)= -0.44*t + 1.47
+# y(t)= -0.59*t + 2.13
+# z(t)= 0.48*t + 0.80
+
