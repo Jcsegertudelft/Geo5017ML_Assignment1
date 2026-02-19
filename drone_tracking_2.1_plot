@@ -16,7 +16,7 @@ z = pos[:,2]
 fig = plt.figure(figsize=(8,6))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(x,y,z, color='navy', label='Tracked Positions')
-ax.plot(x,y,z, linewidth=1.5, color='crimson', label='Trajectory')
+ax.plot(x,y,z, linewidth=1.4, color='crimson', label='Trajectory')
 ax.set_xlabel('X Position')
 ax.set_ylabel('Y Position')
 ax.set_zlabel('Z Position')
