@@ -101,7 +101,7 @@ def main(Viz):
         ax.set_aspect('equal')
         ax.legend(fontsize=12)
         plt.tight_layout()
-        plt.savefig('Drone Trajectory.png', dpi = 300)
+        plt.savefig('Drone_Trajectory_With_Fit.png', dpi = 300)
         plt.show()
 
 
