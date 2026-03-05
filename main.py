@@ -6,7 +6,7 @@ import numpy as np
 from  matplotlib import pyplot as plt
 from Models import constv,consta
 
-Model_used = 'constv' #set to constv for constant velocity, to consta for constant acceleration
+Model_used = 'consta' #set to constv for constant velocity, to consta for constant acceleration
 Learning_rate = 0.001
 Max_iter = 100000
 Tolerance = 1e-6 #Minimum step size for another iteration to take place
@@ -84,22 +84,22 @@ def main(Viz):
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(x_measured,y_measured,z_measured, color='navy', label='Measured Positions')
         ax.scatter(x_predicted[-1],y_predicted[-1],z_predicted[-1], color='navy', label='Predicted Position at t=7', s=80)
-        ax.plot(x_predicted,y_predicted,z_predicted, linewidth=1.4, color='crimson', label='Estimated Trajectory')
-        ax.set_xlabel('X Position')
-        ax.set_ylabel('Y Position')
-        ax.set_zlabel('Z Position')
-        ax.set_title('Estimated Drone Trajectory using Gradient Descent', pad=20)
-        ax.text(x_measured[0]+ 0.2,y_measured[0],z_measured[0],'t = 1')
-        ax.text(x_measured[1]+ 0.2,y_measured[1],z_measured[1],'t = 2')
-        ax.text(x_measured[2]+ 0.2,y_measured[2],z_measured[2],'t = 3')
-        ax.text(x_measured[3]+ 0.2,y_measured[3],z_measured[3],'t = 4')
-        ax.text(x_measured[4]+ 0.2,y_measured[4],z_measured[4],'t = 5')
-        ax.text(x_measured[5]+ 0.2,y_measured[5],z_measured[5],'t = 6')
-        ax.text(x_predicted[-1]+ 0.35,y_predicted[-1],z_predicted[-1],'t = 7')
+        ax.plot(x_predicted,y_predicted,z_predicted, linewidth=1.4, color='crimson', label='Fitted Trajectory')
+        ax.set_xlabel('X Position', fontsize=13)
+        ax.set_ylabel('Y Position', fontsize=13)
+        ax.set_zlabel('Z Position', fontsize=13)
+        ax.set_title('Fitted Drone Trajectory using Gradient Descent', pad=20)
+        ax.text(x_measured[0]+ 0.2,y_measured[0],z_measured[0],'t = 1', fontsize=12)
+        ax.text(x_measured[1]+ 0.2,y_measured[1],z_measured[1],'t = 2', fontsize=12)
+        ax.text(x_measured[2]+ 0.2,y_measured[2],z_measured[2],'t = 3', fontsize=12)
+        ax.text(x_measured[3]+ 0.2,y_measured[3],z_measured[3],'t = 4', fontsize=12)
+        ax.text(x_measured[4]+ 0.2,y_measured[4],z_measured[4],'t = 5', fontsize=12)
+        ax.text(x_measured[5]+ 0.2,y_measured[5],z_measured[5],'t = 6', fontsize=12)
+        ax.text(x_predicted[-1]+ 0.35,y_predicted[-1],z_predicted[-1],'t = 7',fontsize=13)
         ax.set_xlim(-3, 3)
         ax.set_ylim(-5, 2)
         ax.set_aspect('equal')
-        ax.legend()
+        ax.legend(fontsize=12)
         plt.tight_layout()
         plt.savefig('Drone Trajectory.png', dpi = 300)
         plt.show()
