@@ -9,6 +9,8 @@ drone_tracking_2.1_plot.py is an independent file used for the exercise 2.1 plot
 
 # Required Packages
 The files only uses the Numpy package for arrays and computation and the Matplotlib package for visualization.
-These can be installed through: \n
-pip install numpy \n
+These can be installed through:
+
+pip install numpy 
+
 pip install matplotlib 
